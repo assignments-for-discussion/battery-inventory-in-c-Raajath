@@ -10,7 +10,7 @@ struct CountsBySoH {
 };
 
 struct CountsBySoH countBatteriesByHealth(const int* presentCapacities, int nBatteries) {
-  struct CountsBySoH counts = {0, 0, 0};
+  struct CountsBySoH counts = {0, 0, 0, 0 };
 
   for(int i=0;i<nBatteries;i++)
     {
@@ -26,7 +26,7 @@ struct CountsBySoH countBatteriesByHealth(const int* presentCapacities, int nBat
     else{
              //Calculating SoH percentage
          int ratedCapacity=120;
-         double soh= double((100*presentCapacities[i])/ratedCapacity);
+         double soh= ((100*presentCapacities[i])/ratedCapacity);
 
       if(soh>80.0)
       {
